@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADRENALYN XL 25-26 | Gestor Pro</title>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --laliga: #ff0050; --bg: #0a0a0c; --card: #16161d; --gold: #ffd700; --green: #00ff88; }
+        body { background: var(--bg); color: white; font-family: 'Inter', sans-serif; margin: 0; padding: 20px; background-image: linear-gradient(135deg, #121217 0%, #0a0a0c 100%); }
+        
+        .top-bar { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--laliga); padding-bottom: 15px; margin-bottom: 25px; flex-wrap: wrap; gap: 15px; }
+        .logo { font-family: 'Barlow Condensed'; font-size: 2.2rem; text-transform: uppercase; letter-spacing: -1px; }
+        
+        .actions { display: flex; gap: 10px; }
+        .btn { border: none; padding: 10px 18px; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: 0.2s; font-size: 0.9rem; }
+        .btn-excel { background: #217346; color: white; }
+        .btn-repes { background: var(--gold); color: black; }
+        .btn-repes.active { outline: 3px solid white; box-shadow: 0 0 15px var(--gold); }
+
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-bottom: 30px; }
+        .stat-item { background: rgba(255,255,255,0.03); padding: 15px; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.05); }
+        .stat-val { display: block; font-size: 1.8rem; font-family: 'Barlow Condensed'; color: var(--laliga); }
+        
+        .filter-box { background: var(--card); padding: 15px; border-radius: 12px; margin-bottom: 25px; display: flex; gap: 12px; flex-wrap: wrap; }
+        input, select { background: #252530; border: 1px solid #333; color: white; padding: 10px; border-radius: 6px; flex: 1; min-width: 150px; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 15px; }
+        .c-card { background: var(--card); border-radius: 12px; padding: 12px; position: relative; transition: 0.3s; border: 1px solid #222; }
+        .c-card.tengo { border-bottom: 4px solid var(--green); }
+        .c-card.falta { opacity: 0.4; grayscale: 1; }
+        .c-card.repe { border: 1px solid var(--gold); background: linear-gradient(145deg, #16161d 0%, #1c1c25 100%); }
+        
+        .badge-repe { position: absolute; top: -8px; right: -8px; background: var(--gold); color: black; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.8rem; border: 2px solid var(--bg); }
+        .team-tag { font-size: 0.7rem; color: #888; text-transform: uppercase; margin-top: 5px; display: block; }
+        .cat-tag { font-size: 0.65rem; background: var(--laliga); color: white; padding: 2px 6px; border-radius: 4px; font-weight: bold; display: inline-block; margin-top: 8px; }
+        
+        .toast { position: fixed; bottom: 20px; right: 20px; background: var(--green); color: black; padding: 12px 25px; border-radius: 30px; font-weight: bold; animation: slideUp 0.3s; z-index: 100; }
+        @keyframes slideUp { from { transform: translateY(100px); } to { transform: translateY(0); } }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect, useMemo } = React;
+
+        function App() {
+            const [data, setData] = useState(null);
+            const [search, setSearch] = useState("");
+            const [team, setTeam] = useState("ALL");
+            const [repesMode, setRepesMode] = useState(false);
+            const [showToast, setShowToast] = useState(false);
+
+            useEffect(() => {
+                fetch('data/adrenalyn_data.json').then(r => r.json()).then(setData);
+            }, []);
+
+            const filtered = useMemo(() => {
+                if (!data) return [];
+                return data.cartas.filter(c => {
+                    const matchSearch = c.nombre.toLowerCase().includes(search.toLowerCase()) || c.id.toString().includes(search);
+                    const matchTeam = team === "ALL" || c.equipo === team;
+                    const matchMode = repesMode ? c.repetidos > 0 : true;
+                    return matchSearch && matchTeam && matchMode;
+                });
+            }, [data, search, team, repesMode]);
+
+            const copyInterchange = () => {
+                const repes = data.cartas.filter(c => c.repetidos > 0);
+                const text = "📋 MIS REPETIDOS ADRENALYN 25-26:\n" + 
+                    repes.map(c => `#${c.id} ${c.nombre} (${c.equipo}) x${c.repetidos}`).join("\n");
+                
+                navigator.clipboard.writeText(text);
+                setShowToast(true);
+                setTimeout(() => setShowToast(false), 2500);
+            };
+
+            const downloadExcel = () => {
+                const wb = XLSX.utils.book_new();
+                const faltan = data.cartas.filter(c => !c.tengo).map(c => ({ Nº: c.id, Jugador: c.nombre, Equipo: c.equipo }));
+                const repes = data.cartas.filter(c => c.repetidos > 0).map(c => ({ Nº: c.id, Jugador: c.nombre, Repes: c.repetidos }));
+                XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(faltan), "ME FALTAN");
+                XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(repes), "REPETIDOS");
+                XLSX.writeFile(wb, "Coleccion_Adrenalyn.xlsx");
+            };
+
+            if (!data) return <div style={{padding: 40, textAlign: 'center'}}>Calentando en la banda...</div>;
+
+            return (
+                <div>
+                    {showToast && <div className="toast">📋 ¡Lista copiada al portapapeles!</div>}
+                    
+                    <header className="top-bar">
+                        <div className="logo">Adrenalyn <span style={{color: 'var(--laliga)'}}>XL</span> 25-26</div>
+                        <div className="actions">
+                            <button onClick={copyInterchange} className="btn btn-repes">
+                                <i className="fab fa-whatsapp"></i> LISTA INTERCAMBIO
+                            </button>
+                            <button onClick={downloadExcel} className="btn btn-excel">
+                                <i className="fas fa-file-excel"></i> EXCEL
+                            </button>
+                        </div>
+                    </header>
+
+                    <div className="stats">
+                        <div className="stat-item"><span className="stat-val">{data.cartas.length}</span>TOTAL</div>
+                        <div className="stat-item"><span className="stat-val">{data.cartas.filter(c => c.tengo).length}</span>TENGO</div>
+                        <div className="stat-item"><span className="stat-val" style={{color: 'var(--gold)'}}>{data.cartas.filter(c => c.repetidos > 0).length}</span>REPETIDAS</div>
+                        <div className="stat-item"><span className="stat-val" style={{color: 'var(--green)'}}>{Math.round((data.cartas.filter(c => c.tengo).length / data.cartas.length)*100)}%</span>COMPLETO</div>
+                    </div>
+
+                    <div className="filter-box">
+                        <input placeholder="Buscar por nombre o número..." onChange={e => setSearch(e.target.value)} />
+                        <select onChange={e => setTeam(e.target.value)}>
+                            <option value="ALL">Todos los equipos</option>
+                            {[...new Set(data.cartas.map(c => c.equipo))].sort().map(t => <option key={t} value={t}>{t}</option>)}
+                        </select>
+                        <button 
+                            className={`btn ${repesMode ? 'btn-repes active' : ''}`} 
+                            style={{background: repesMode ? 'var(--gold)' : '#333', color: repesMode ? 'black' : 'white'}}
+                            onClick={() => setRepesMode(!repesMode)}
+                        >
+                            {repesMode ? "Viendo solo Repes" : "Ver Repetidas"}
+                        </button>
+                    </div>
+
+                    <div className="grid">
+                        {filtered.map(c => (
+                            <div key={c.id} className={`c-card ${c.tengo ? 'tengo' : 'falta'} ${c.repetidos > 0 ? 'repe' : ''}`}>
+                                {c.repetidos > 0 && <div className="badge-repe">x{c.repetidos}</div>}
+                                <div style={{fontSize: '0.8rem', fontWeight: 800, color: '#666'}}>#{c.id}</div>
+                                <div style={{fontWeight: 700, margin: '4px 0', fontSize: '0.95rem'}}>{c.nombre}</div>
+                                <span className="team-tag">{c.equipo}</span>
+                                <span className="cat-tag">{c.categoria}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            );
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
