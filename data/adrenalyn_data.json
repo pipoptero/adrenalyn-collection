@@ -3,16 +3,16 @@
     {
       "categoria": "REGULARES",
       "total": 360,
-      "tengo": 203,
-      "faltan": 157,
-      "progreso": 0.5638888889
+      "tengo": 224,
+      "faltan": 136,
+      "progreso": 0.6222222222
     },
     {
       "categoria": "ESTADIOS",
       "total": 20,
-      "tengo": 15,
-      "faltan": 5,
-      "progreso": 0.75
+      "tengo": 16,
+      "faltan": 4,
+      "progreso": 0.8
     },
     {
       "categoria": "VAMOS",
@@ -38,9 +38,9 @@
     {
       "categoria": "Diamantes",
       "total": 18,
-      "tengo": 12,
-      "faltan": 6,
-      "progreso": 0.6666666667
+      "tengo": 13,
+      "faltan": 5,
+      "progreso": 0.7222222222
     },
     {
       "categoria": "Influencers",
@@ -52,16 +52,16 @@
     {
       "categoria": "Protas",
       "total": 18,
-      "tengo": 8,
-      "faltan": 10,
-      "progreso": 0.4444444444
+      "tengo": 9,
+      "faltan": 9,
+      "progreso": 0.5
     },
     {
       "categoria": "Super Cracks",
       "total": 26,
-      "tengo": 12,
-      "faltan": 14,
-      "progreso": 0.4615384615
+      "tengo": 14,
+      "faltan": 12,
+      "progreso": 0.5384615385
     },
     {
       "categoria": "CARTAS TOP",
@@ -73,9 +73,9 @@
     {
       "categoria": "TOTAL COLECCIÓN",
       "total": 498,
-      "tengo": 274,
-      "faltan": 224,
-      "progreso": 0.5502008032
+      "tengo": 300,
+      "faltan": 198,
+      "progreso": 0.6024096386
     }
   ],
   "regulares": [
@@ -174,7 +174,7 @@
       "numero": 14,
       "nombre": "DENIS SUÁREZ",
       "equipo": "D. ALAVÉS",
-      "tengo": false,
+      "tengo": true,
       "repetidos": 0
     },
     {
@@ -440,7 +440,7 @@
       "numero": 52,
       "nombre": "JULIÁN ALVAREZ",
       "equipo": "ATLÉTICO DE MADRID",
-      "tengo": false,
+      "tengo": true,
       "repetidos": 0
     },
     {
@@ -503,7 +503,7 @@
       "numero": 61,
       "nombre": "ARAÚJO",
       "equipo": "FC BARCELONA",
-      "tengo": false,
+      "tengo": true,
       "repetidos": 0
     },
     {
@@ -734,7 +734,7 @@
       "numero": 94,
       "nombre": "JAVI RUEDA",
       "equipo": "RC CELTA",
-      "tengo": false,
+      "tengo": true,
       "repetidos": 0
     },
     {
@@ -755,7 +755,7 @@
       "numero": 97,
       "nombre": "MARCOS ALONSO",
       "equipo": "RC CELTA",
-      "tengo": false,
+      "tengo": true,
       "repetidos": 0
     },
     {
@@ -811,7 +811,7 @@
       "numero": 105,
       "nombre": "BRYAN ZARAGOZA",
       "equipo": "RC CELTA",
-      "tengo": false,
+      "tengo": true,
       "repetidos": 0
     },
     {
@@ -860,7 +860,7 @@
       "numero": 112,
       "nombre": "ÁLVARO NÚÑEZ",
       "equipo": "ELCHE CF",
-      "tengo": false,
+      "tengo": true,
       "repetidos": 0
     },
     {
@@ -881,7 +881,7 @@
       "numero": 115,
       "nombre": "AFFENGRUBER",
       "equipo": "ELCHE CF",
-      "tengo": false,
+      "tengo": true,
       "repetidos": 0
     },
     {
@@ -951,7 +951,7 @@
       "numero": 125,
       "nombre": "ANDRÉ SILVA",
       "equipo": "ELCHE CF",
-      "tengo": false,
+      "tengo": true,
       "repetidos": 0
     },
     {
@@ -1014,7 +1014,7 @@
       "numero": 134,
       "nombre": "CARLOS ROMERO",
       "equipo": "RCD ESPANYOL",
-      "tengo": false,
+      "tengo": true,
       "repetidos": 0
     },
     {
@@ -1084,7 +1084,7 @@
       "numero": 144,
       "nombre": "PERE MILLA",
       "equipo": "RCD ESPANYOL",
-      "tengo": false,
+      "tengo": true,
       "repetidos": 0
     },
     {
@@ -1098,7 +1098,7 @@
       "numero": 146,
       "nombre": "DAVID SORIA",
       "equipo": "GETAFE CF",
-      "tengo": false,
+      "tengo": true,
       "repetidos": 0
     },
     {
@@ -1168,7 +1168,7 @@
       "numero": 156,
       "nombre": "ARAMBARRI",
       "equipo": "GETAFE CF",
-      "tengo": false,
+      "tengo": true,
       "repetidos": 0
     },
     {
@@ -1399,7 +1399,7 @@
       "numero": 189,
       "nombre": "PAMPÍN",
       "equipo": "LEVANTE UD",
-      "tengo": false,
+      "tengo": true,
       "repetidos": 0
     },
     {
@@ -1476,7 +1476,7 @@
       "numero": 200,
       "nombre": "COURTOIS",
       "equipo": "REAL MADRID",
-      "tengo": false,
+      "tengo": true,
       "repetidos": 0
     },
     {
@@ -1589,7 +1589,7 @@
       "nombre": "VINÍCIUS",
       "equipo": "REAL MADRID",
       "tengo": true,
-      "repetidos": 2
+      "repetidos": 1
     },
     {
       "numero": 217,
@@ -1672,7 +1672,7 @@
       "numero": 228,
       "nombre": "DARDER",
       "equipo": "RCD MALLORCA",
-      "tengo": false,
+      "tengo": true,
       "repetidos": 0
     },
     {
@@ -1819,7 +1819,7 @@
       "numero": 249,
       "nombre": "VÍCTOR MUÑOZ",
       "equipo": "CA OSASUNA",
-      "tengo": false,
+      "tengo": true,
       "repetidos": 0
     },
     {
@@ -1994,7 +1994,7 @@
       "numero": 274,
       "nombre": "RATIU",
       "equipo": "RAYO VALLECANO",
-      "tengo": false,
+      "tengo": true,
       "repetidos": 0
     },
     {
@@ -2050,7 +2050,7 @@
       "numero": 282,
       "nombre": "ISI",
       "equipo": "RAYO VALLECANO",
-      "tengo": false,
+      "tengo": true,
       "repetidos": 0
     },
     {
@@ -2309,7 +2309,7 @@
       "numero": 319,
       "nombre": "BATISTA MENDY",
       "equipo": "SEVILLA FC",
-      "tengo": false,
+      "tengo": true,
       "repetidos": 0
     },
     {
@@ -2351,7 +2351,7 @@
       "numero": 325,
       "nombre": "ESCUDO",
       "equipo": "VALENCIA CF",
-      "tengo": false,
+      "tengo": true,
       "repetidos": 0
     },
     {
@@ -2684,7 +2684,7 @@
         "numero": 235,
         "nombre": "ESTADIO",
         "equipo": "CA OSASUNA",
-        "tengo": false
+        "tengo": true
       },
       {
         "numero": 253,
@@ -3034,7 +3034,7 @@
         "numero": 411,
         "nombre": "JAN VIRGILI",
         "equipo": "RCD MALLORCA",
-        "tengo": false
+        "tengo": true
       },
       {
         "numero": 412,
@@ -3052,7 +3052,7 @@
         "numero": 414,
         "nombre": "RENATO VEIGA",
         "equipo": "VILLARREAL CF",
-        "tengo": false
+        "tengo": true
       }
     ],
     "Influencers": [
@@ -3164,7 +3164,7 @@
         "numero": 432,
         "nombre": "TCHOUAMÉNI",
         "equipo": "REAL MADRID",
-        "tengo": false
+        "tengo": true
       },
       {
         "numero": 433,
@@ -3274,7 +3274,7 @@
         "numero": 450,
         "nombre": "BALDE",
         "equipo": "FC BARCELONA",
-        "tengo": false
+        "tengo": true
       },
       {
         "numero": 451,
@@ -3352,7 +3352,7 @@
         "numero": 463,
         "nombre": "KUBO",
         "equipo": "REAL SOCIEDAD",
-        "tengo": false
+        "tengo": true
       },
       {
         "numero": 464,
@@ -3471,7 +3471,7 @@
     "VILLARREAL CF"
   ],
   "metadata": {
-    "ultima_actualizacion": "2026-01-29T07:22:45.221174",
+    "ultima_actualizacion": "2026-01-29T18:25:59.592507",
     "total_cartas": 498,
     "version": "1.0"
   }
