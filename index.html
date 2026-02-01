@@ -1375,11 +1375,11 @@
     ::-webkit-scrollbar-thumb:hover {
       background: linear-gradient(135deg, var(--danger), var(--ea-green));
     }
-  
-    /* Efectos visuales para escudos */
+
+    /* Efectos para escudos */
     .card img {
       filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.4));
-      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transition: transform 0.3s ease;
     }
 
     .card:hover img {
@@ -1396,24 +1396,17 @@
     }
 
     @keyframes badgePulse {
-      0%, 100% { 
-        opacity: 1;
-        transform: scale(1);
-      }
-      50% { 
-        opacity: 0.8;
-        transform: scale(1.05);
-      }
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
     }
 
     .team-card img {
       filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
-      transition: all 0.3s ease;
+      transition: transform 0.3s ease;
     }
 
     .team-card:hover img {
       transform: scale(1.15) rotate(5deg);
-      filter: drop-shadow(0 6px 15px rgba(0, 229, 255, 0.6));
     }
 
     @keyframes badgeFloat {
@@ -1477,7 +1470,7 @@
       const [filterEquipo, setFilterEquipo] = useState('todos');
       const [filterEstado, setFilterEstado] = useState('todos');
       const [searchTerm, setSearchTerm] = useState('');
-      const [selectedCategory, setSelectedCategory] = useState('TODAS');
+      const [selectedCategory, setSelectedCategory] = useState('REGULARES');
       const [sidebarOpen, setSidebarOpen] = useState(false);
       const [theme, setTheme] = useState('estadio');
       const [targetPercentage, setTargetPercentage] = useState(100);
@@ -1661,8 +1654,7 @@
             (filterEstado === 'faltan' && !carta.tengo) ||
             (filterEstado === 'repetidos' && carta.repetidos > 0);
           const matchSearch = carta.nombre.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                             carta.equipo.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                             carta.numero.toString().includes(searchTerm);
+                             carta.equipo.toLowerCase().includes(searchTerm.toLowerCase());
           
           return matchEquipo && matchEstado && matchSearch;
         });
@@ -1889,38 +1881,6 @@
             <div className="hero-header">
               <div className="grass-texture"></div>
               <div className="field-lines"></div>
-                            {/* Escudos flotantes decorativos */}
-              {data && data.equipos && (
-                <div style={{
-                  position: 'absolute',
-                  top: '20px',
-                  left: '20px',
-                  right: '20px',
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  opacity: 0.15,
-                  pointerEvents: 'none',
-                  zIndex: 1
-                }}>
-                  {data.equipos.slice(0, 6).map((equipo, idx) => (
-                    getTeamBadge(equipo) && (
-                      <img
-                        key={equipo}
-                        src={getTeamBadge(equipo)}
-                        alt=""
-                        style={{
-                          width: '50px',
-                          height: '50px',
-                          objectFit: 'contain',
-                          animation: `badgeFloat ${2.5 + idx * 0.3}s ease-in-out infinite`,
-                          animationDelay: `${idx * 0.2}s`
-                        }}
-                      />
-                    )
-                  ))}
-                </div>
-              )}
-
               <div className="hero-content">
                 <div className="hero-badge">⚽</div>
                 <h1 className="hero-title">Adrenalyn XL</h1>
@@ -1983,115 +1943,6 @@
                   <span>📥 Lista Intercambios</span>
                 </button>
               </div>
-
-              {/* Panel destacado: Mejor equipo */}
-              {activeTab === 'dashboard' && estatsPorEquipo && estatsPorEquipo.length > 0 && (
-                <div style={{
-                  background: 'linear-gradient(135deg, rgba(64, 145, 108, 0.2), rgba(0, 229, 255, 0.15))',
-                  border: '2px solid var(--ea-cyan)',
-                  borderRadius: '20px',
-                  padding: '30px',
-                  marginBottom: '30px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '25px',
-                  position: 'relative',
-                  overflow: 'hidden',
-                  boxShadow: '0 10px 40px rgba(0, 229, 255, 0.2)'
-                }}>
-                  <div style={{
-                    position: 'absolute',
-                    top: '-15px',
-                    right: '-15px',
-                    fontSize: '6rem',
-                    opacity: 0.05
-                  }}>
-                    🏆
-                  </div>
-                  {getTeamBadge(estatsPorEquipo[0].equipo) && (
-                    <img 
-                      src={getTeamBadge(estatsPorEquipo[0].equipo)} 
-                      alt=""
-                      style={{
-                        width: '90px',
-                        height: '90px',
-                        objectFit: 'contain',
-                        filter: 'drop-shadow(0 8px 20px rgba(0, 229, 255, 0.6))',
-                        animation: 'badgeFloat 3s ease-in-out infinite',
-                        flexShrink: 0
-                      }}
-                    />
-                  )}
-                  <div style={{flex: 1}}>
-                    <div style={{
-                      fontSize: '0.85rem',
-                      color: 'var(--ea-cyan)',
-                      textTransform: 'uppercase',
-                      letterSpacing: '3px',
-                      marginBottom: '8px',
-                      fontWeight: '700'
-                    }}>
-                      🏆 Tu Mejor Equipo
-                    </div>
-                    <div style={{
-                      fontFamily: 'Teko',
-                      fontSize: '2.5rem',
-                      fontWeight: '700',
-                      color: 'var(--text)',
-                      lineHeight: 1,
-                      marginBottom: '8px'
-                    }}>
-                      {estatsPorEquipo[0].equipo}
-                    </div>
-                    <div style={{
-                      fontSize: '1rem',
-                      color: 'var(--text-dim)',
-                      marginBottom: '12px'
-                    }}>
-                      {estatsPorEquipo[0].tengo} de {estatsPorEquipo[0].total} cartas coleccionadas
-                    </div>
-                    <div style={{
-                      height: '10px',
-                      background: 'rgba(255, 255, 255, 0.1)',
-                      borderRadius: '5px',
-                      overflow: 'hidden'
-                    }}>
-                      <div style={{
-                        height: '100%',
-                        width: `${estatsPorEquipo[0].progreso}%`,
-                        background: 'linear-gradient(90deg, var(--ea-green), var(--ea-cyan))',
-                        borderRadius: '5px',
-                        transition: 'width 1s ease'
-                      }}></div>
-                    </div>
-                  </div>
-                  <div style={{
-                    textAlign: 'center',
-                    paddingLeft: '25px',
-                    borderLeft: '2px solid rgba(255, 255, 255, 0.1)'
-                  }}>
-                    <div style={{
-                      fontFamily: 'Teko',
-                      fontSize: '4rem',
-                      fontWeight: '700',
-                      lineHeight: 1,
-                      background: 'linear-gradient(135deg, var(--ea-green), var(--ea-cyan))',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent'
-                    }}>
-                      {estatsPorEquipo[0].progreso}%
-                    </div>
-                    <div style={{
-                      fontSize: '0.75rem',
-                      color: 'var(--text-dim)',
-                      textTransform: 'uppercase',
-                      letterSpacing: '2px'
-                    }}>
-                      Completado
-                    </div>
-                  </div>
-                </div>
-              )}
 
               {activeTab === 'dashboard' && (
                 <div>
@@ -2171,7 +2022,7 @@
                       <option value="todos">Todos los equipos</option>
                       {data.equipos.map(eq => <option key={eq} value={eq}>{eq}</option>)}
                     </select>
-                    <input type="text" className="search-input" placeholder="🔍 Buscar por nombre, equipo o número..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+                    <input type="text" className="search-input" placeholder="🔍 Buscar..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
                   </div>
                   <div className="filter-chips">
                     <div className={`chip ${filterEstado === 'todos' ? 'active' : ''}`} onClick={() => setFilterEstado('todos')}>
@@ -2220,4 +2071,230 @@
                 </div>
               )}
 
-              {
+              {activeTab === 'equipos' && (
+                <div>
+                  <div className="team-grid">
+                    {estatsPorEquipo.map(team => (
+                      <div 
+                        key={team.equipo} 
+                        className="team-card"
+                        onClick={() => {
+                          setActiveTab('coleccion');
+                          setFilterEquipo(team.equipo);
+                        }}
+                      >
+                        <div style={{display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px'}}>
+                        {getTeamBadge(team.equipo) && (
+                          <img 
+                            src={getTeamBadge(team.equipo)} 
+                            alt={team.equipo}
+                            style={{width: '70px', height: '70px', objectFit: 'contain'}}
+                          />
+                        )}
+                        <div className="team-name" style={{margin: 0}}>{team.equipo}</div>
+                      </div>
+                        <div className="team-progress">
+                          <span>{team.tengo} / {team.total}</span>
+                          <span style={{color: 'var(--ea-cyan)'}}>{team.progreso}%</span>
+                        </div>
+                        <div className="team-progress-bar">
+                          <div className="team-progress-fill" style={{width: `${team.progreso}%`}}></div>
+                        </div>
+                        <div style={{marginTop: '8px', fontSize: '0.8rem', color: 'var(--text-dim)'}}>
+                          Faltan: {team.faltan} cartas
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {activeTab === 'estadisticas' && (
+                <div>
+                  <div className="category-section">
+                    <div className="category-header">
+                      <div className="category-title">📊 Progreso por Equipo</div>
+                    </div>
+                    <div className="team-grid">
+                      {estatsPorEquipo.map((team, idx) => (
+                        <div key={team.equipo} className="team-card">
+                          <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px'}}>
+                            <span style={{fontSize: '1.3rem', fontWeight: '700'}}>#{idx + 1}</span>
+                            <span style={{fontSize: '1.8rem', fontFamily: 'Teko', color: 'var(--ea-cyan)'}}>
+                              {team.progreso}%
+                            </span>
+                          </div>
+                          <div style={{display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px'}}>
+                        {getTeamBadge(team.equipo) && (
+                          <img 
+                            src={getTeamBadge(team.equipo)} 
+                            alt={team.equipo}
+                            style={{width: '50px', height: '50px', objectFit: 'contain'}}
+                          />
+                        )}
+                        <div className="team-name" style={{margin: 0}}>{team.equipo}</div>
+                      </div>
+                          <div className="team-progress-bar">
+                            <div className="team-progress-fill" style={{width: `${team.progreso}%`}}></div>
+                          </div>
+                          <div style={{marginTop: '8px', display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem'}}>
+                            <span style={{color: 'var(--success)'}}>✓ {team.tengo}</span>
+                            <span style={{color: 'var(--laliga-orange)'}}>✗ {team.faltan}</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="category-section">
+                    <div className="category-header">
+                      <div className="category-title">🏆 Categoría Más Completa</div>
+                    </div>
+                    <div className="team-grid">
+                      {data.resumen
+                        .filter(cat => cat.categoria !== 'TOTAL COLECCIÓN')
+                        .sort((a, b) => b.progreso - a.progreso)
+                        .map((cat, idx) => (
+                          <div key={cat.categoria} className="team-card">
+                            <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px'}}>
+                              <span style={{fontSize: '1.5rem'}}>
+                                {idx === 0 ? '🥇' : idx === 1 ? '🥈' : idx === 2 ? '🥉' : `#${idx + 1}`}
+                              </span>
+                              <span style={{fontSize: '1.8rem', fontFamily: 'Teko', color: 'var(--warning)'}}>
+                                {(cat.progreso * 100).toFixed(0)}%
+                              </span>
+                            </div>
+                            <div className="team-name">{cat.categoria}</div>
+                            <div className="team-progress-bar">
+                              <div className="team-progress-fill" style={{width: `${cat.progreso * 100}%`}}></div>
+                            </div>
+                            <div style={{marginTop: '8px', display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem'}}>
+                              <span style={{color: 'var(--success)'}}>✓ {cat.tengo}/{cat.total}</span>
+                              <span style={{color: 'var(--laliga-orange)'}}>Faltan {cat.faltan}</span>
+                            </div>
+                          </div>
+                        ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {activeTab === 'repetidos' && (
+                <div>
+                  {data.repetidos && data.repetidos.length > 0 ? (
+                    <>
+                      <div style={{
+                        background: 'var(--bg-elevated)',
+                        border: '2px solid var(--border)',
+                        borderRadius: '12px',
+                        padding: '20px',
+                        marginBottom: '25px',
+                        textAlign: 'center'
+                      }}>
+                        <div style={{
+                          fontSize: '1.1rem',
+                          color: 'var(--text)',
+                          marginBottom: '8px',
+                          fontWeight: '700'
+                        }}>
+                          📦 Todas las Cartas Repetidas
+                        </div>
+                        <div style={{
+                          fontSize: '0.9rem',
+                          color: 'var(--text-dim)'
+                        }}>
+                          Total de copias extra: {data.repetidos.reduce((sum, c) => sum + c.copias, 0)}
+                        </div>
+                      </div>
+
+                      <div className="cards-grid">
+                        {data.repetidos.map((carta, idx) => (
+                          <div key={`${carta.numero}-${idx}`} className="card repeated">
+                            <div className="card-number">#{carta.numero}</div>
+                            <div className="card-name">{carta.nombre}</div>
+                            <div className="card-team" style={{display: 'flex', alignItems: 'center', gap: '6px'}}>
+                          {getTeamBadge(carta.equipo) && (
+                            <img 
+                              src={getTeamBadge(carta.equipo)} 
+                              alt={carta.equipo}
+                              style={{width: '32px', height: '32px', objectFit: 'contain'}}
+                            />
+                          )}
+                          <span>{carta.equipo}</span>
+                        </div>
+                            <div className="card-status">
+                              <span className="status-badge owned">✓ Tengo</span>
+                              <span className="repeated-count">x{carta.copias}</span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div style={{
+                        background: 'var(--bg-elevated)',
+                        border: '2px solid var(--border)',
+                        borderRadius: '12px',
+                        padding: '20px',
+                        marginBottom: '25px',
+                        textAlign: 'center'
+                      }}>
+                        <div style={{
+                          fontSize: '1.1rem',
+                          color: 'var(--text-dim)',
+                          marginBottom: '8px'
+                        }}>
+                          📦 Cartas Repetidas (REGULARES)
+                        </div>
+                        <div style={{
+                          fontSize: '0.9rem',
+                          color: 'var(--text-dim)',
+                          opacity: 0.7
+                        }}>
+                          Mostrando solo REGULARES (actualiza el script para ver todas)
+                        </div>
+                      </div>
+
+                      <div className="cards-grid">
+                        {data.regulares.filter(c => c.repetidos > 0).map(carta => (
+                          <div key={carta.numero} className="card repeated">
+                            <div className="card-number">#{carta.numero}</div>
+                            <div className="card-name">{carta.nombre}</div>
+                            <div className="card-team" style={{display: 'flex', alignItems: 'center', gap: '6px'}}>
+                          {getTeamBadge(carta.equipo) && (
+                            <img 
+                              src={getTeamBadge(carta.equipo)} 
+                              alt={carta.equipo}
+                              style={{width: '32px', height: '32px', objectFit: 'contain'}}
+                            />
+                          )}
+                          <span>{carta.equipo}</span>
+                        </div>
+                            <div className="card-status">
+                              <span className="status-badge owned">✓ Tengo</span>
+                              <span className="repeated-count">x{carta.repetidos}</span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                      {data.regulares.filter(c => c.repetidos > 0).length === 0 && (
+                        <div className="empty-state">
+                          <div className="empty-state-icon">📦</div>
+                          <div className="empty-state-text">No tienes cartas repetidas</div>
+                        </div>
+                      )}
+                    </>
+                  )}
+                </div>
+              )}
+            </div>
+          </div>
+        </>
+      );
+    }
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>
