@@ -375,6 +375,15 @@
       background: rgba(0, 229, 255, 0.1);
     }
 
+
+    /* Renderizado suave de escudos */
+    .card img, .team-card img {
+      image-rendering: auto;
+      image-rendering: -webkit-optimize-contrast;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
     @keyframes badgeFloat {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-5px); }
@@ -1479,6 +1488,15 @@
       background: rgba(0, 229, 255, 0.1);
     }
 
+
+    /* Renderizado suave de escudos */
+    .card img, .team-card img {
+      image-rendering: auto;
+      image-rendering: -webkit-optimize-contrast;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
     @keyframes badgeFloat {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
@@ -2158,7 +2176,7 @@
                           <img 
                             src={getTeamBadge(team.equipo)} 
                             alt={team.equipo}
-                            style={{width: '70px', height: '70px', objectFit: 'contain'}}
+                            style={{width: '50px', height: '50px', objectFit: 'contain'}}
                           />
                         )}
                         <div className="team-name" style={{margin: 0}}>{team.equipo}</div>
