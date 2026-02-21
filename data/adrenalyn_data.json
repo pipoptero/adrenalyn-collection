@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "ultima_actualizacion": "2026-02-21T14:56:33.016634",
+    "ultima_actualizacion": "2026-02-21T15:01:47.217882",
     "version": "2.0"
   },
   "resumen": [
@@ -84,16 +84,16 @@
     {
       "categoria": "Especiales",
       "total": 36,
-      "tengo": 6,
-      "faltan": 30,
-      "progreso": 0.16666666666666666
+      "tengo": 9,
+      "faltan": 27,
+      "progreso": 0.25
     },
     {
       "categoria": "TOTAL COLECCIÓN",
       "total": 580,
-      "tengo": 481,
-      "faltan": 99,
-      "progreso": 0.8293103448275863
+      "tengo": 484,
+      "faltan": 96,
+      "progreso": 0.8344827586206897
     }
   ],
   "regulares": [
@@ -5052,19 +5052,19 @@
         "numero": "1 Edición Limitada (Megapack)",
         "nombre": "Nico González",
         "equipo": "ATLÉTICO DE MADRID",
-        "tengo": false
+        "tengo": true
       },
       {
         "numero": "2 Edición Limitada (Megapack)",
         "nombre": "De Jong",
         "equipo": "FC BARCELONA",
-        "tengo": false
+        "tengo": true
       },
       {
         "numero": "3 Edición Limitada (Megapack)",
         "nombre": "Huijsen",
         "equipo": "REAL MADRID",
-        "tengo": false
+        "tengo": true
       },
       {
         "numero": "1 Edición Limitada (Tin Box)",
