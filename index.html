@@ -2255,7 +2255,7 @@
                   <div className="cards-grid">
                     {cartasFiltradas.map(carta => (
                       <div key={`${carta.numero}-${carta.categoria || 'reg'}`} className={`card ${carta.tengo ? 'owned' : ''} ${carta.repetidos > 0 ? 'repeated' : ''}`}>
-                        {(() => { const p = parseNumero(carta.numero); return (<><div className="card-number">#{p.num}</div><div className="card-name">{carta.nombre}</div>{p.tipo && <div className="card-type-label">{p.tipo}</div>}</>); })()}
+                        {(() => { const p = parseNumero(carta.numero); const label = carta.categoria === 'Ampliación' ? 'AMPLIACIÓN' : p.tipo; return (<><div className="card-number">#{p.num}</div><div className="card-name">{carta.nombre}</div>{label && <div className="card-type-label">{label}</div>}</>); })()}
                         <div className="card-team" style={{display: 'flex', alignItems: 'center', gap: '6px'}}>
                           {getTeamBadge(carta.equipo) && (
                             <img 
@@ -2423,7 +2423,7 @@
                       <div className="cards-grid">
                         {data.repetidos.map((carta, idx) => (
                           <div key={`${carta.numero}-${idx}`} className="card repeated">
-                            {(() => { const p = parseNumero(carta.numero); return (<><div className="card-number">#{p.num}</div><div className="card-name">{carta.nombre}</div>{p.tipo && <div className="card-type-label">{p.tipo}</div>}</>); })()}
+                            {(() => { const p = parseNumero(carta.numero); const label = carta.categoria === 'Ampliación' ? 'AMPLIACIÓN' : p.tipo; return (<><div className="card-number">#{p.num}</div><div className="card-name">{carta.nombre}</div>{label && <div className="card-type-label">{label}</div>}</>); })()}
                             <div className="card-team" style={{display: 'flex', alignItems: 'center', gap: '6px'}}>
                           {getTeamBadge(carta.equipo) && (
                             <img 
@@ -2471,7 +2471,7 @@
                       <div className="cards-grid">
                         {data.regulares.filter(c => c.repetidos > 0).map(carta => (
                           <div key={carta.numero} className="card repeated">
-                            {(() => { const p = parseNumero(carta.numero); return (<><div className="card-number">#{p.num}</div><div className="card-name">{carta.nombre}</div>{p.tipo && <div className="card-type-label">{p.tipo}</div>}</>); })()}
+                            {(() => { const p = parseNumero(carta.numero); const label = carta.categoria === 'Ampliación' ? 'AMPLIACIÓN' : p.tipo; return (<><div className="card-number">#{p.num}</div><div className="card-name">{carta.nombre}</div>{label && <div className="card-type-label">{label}</div>}</>); })()}
                             <div className="card-team" style={{display: 'flex', alignItems: 'center', gap: '6px'}}>
                           {getTeamBadge(carta.equipo) && (
                             <img 
