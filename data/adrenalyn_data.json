@@ -1,15 +1,15 @@
 {
   "metadata": {
-    "ultima_actualizacion": "2026-03-07T15:33:43.276835",
+    "ultima_actualizacion": "2026-04-18T11:49:49.170684",
     "version": "2.0"
   },
   "resumen": [
     {
       "categoria": "REGULARES",
       "total": 360,
-      "tengo": 340,
-      "faltan": 20,
-      "progreso": 0.9444444444
+      "tengo": 341,
+      "faltan": 19,
+      "progreso": 0.9472222222
     },
     {
       "categoria": "ESTADIOS",
@@ -77,23 +77,23 @@
     {
       "categoria": "Ampliación",
       "total": 46,
-      "tengo": 35,
-      "faltan": 11,
-      "progreso": 0.7608695652
+      "tengo": 47,
+      "faltan": -1,
+      "progreso": 1.02173913
     },
     {
       "categoria": "Especiales",
       "total": 36,
-      "tengo": 17,
-      "faltan": 19,
-      "progreso": 0.4722222222
+      "tengo": 24,
+      "faltan": 12,
+      "progreso": 0.6666666667
     },
     {
       "categoria": "TOTAL COLECCIÓN",
       "total": 595,
-      "tengo": 530,
-      "faltan": 65,
-      "progreso": 0.8907563025210085
+      "tengo": 550,
+      "faltan": 45,
+      "progreso": 0.9243697478991597
     }
   ],
   "regulares": [
@@ -431,7 +431,7 @@
       "nombre": "ALEX BAENA",
       "equipo": "ATLÉTICO DE MADRID",
       "tengo": true,
-      "repetidos": 0
+      "repetidos": 1
     },
     {
       "numero": "49.0",
@@ -515,7 +515,7 @@
       "nombre": "ERIC GARCÍA",
       "equipo": "FC BARCELONA",
       "tengo": true,
-      "repetidos": 0
+      "repetidos": 1
     },
     {
       "numero": "61.0",
@@ -529,7 +529,7 @@
       "nombre": "BALDE",
       "equipo": "FC BARCELONA",
       "tengo": true,
-      "repetidos": 0
+      "repetidos": 1
     },
     {
       "numero": "63.0",
@@ -599,7 +599,7 @@
       "nombre": "RASHFORD",
       "equipo": "FC BARCELONA",
       "tengo": true,
-      "repetidos": 0
+      "repetidos": 1
     },
     {
       "numero": "73.0",
@@ -620,7 +620,7 @@
       "nombre": "VALLES",
       "equipo": "REAL BETIS",
       "tengo": true,
-      "repetidos": 0
+      "repetidos": 1
     },
     {
       "numero": "76.0",
@@ -1131,7 +1131,7 @@
       "nombre": "IGLESIAS",
       "equipo": "GETAFE CF",
       "tengo": true,
-      "repetidos": 0
+      "repetidos": 1
     },
     {
       "numero": "149.0",
@@ -1474,13 +1474,13 @@
       "nombre": "IVÁN ROMERO",
       "equipo": "LEVANTE UD",
       "tengo": true,
-      "repetidos": 0
+      "repetidos": 1
     },
     {
       "numero": "198.0",
       "nombre": "ETTA EYONG",
       "equipo": "LEVANTE UD",
-      "tengo": false,
+      "tengo": true,
       "repetidos": 0
     },
     {
@@ -1838,7 +1838,7 @@
       "nombre": "VÍCTOR MUÑOZ",
       "equipo": "CA OSASUNA",
       "tengo": true,
-      "repetidos": 0
+      "repetidos": 1
     },
     {
       "numero": "250.0",
@@ -2013,7 +2013,7 @@
       "nombre": "RATIU",
       "equipo": "RAYO VALLECANO",
       "tengo": true,
-      "repetidos": 0
+      "repetidos": 1
     },
     {
       "numero": "275.0",
@@ -2118,7 +2118,7 @@
       "nombre": "ESCUDO",
       "equipo": "REAL SOCIEDAD",
       "tengo": true,
-      "repetidos": 0
+      "repetidos": 1
     },
     {
       "numero": "290.0",
@@ -2758,6 +2758,12 @@
       "copias": 1
     },
     {
+      "numero": "48",
+      "nombre": "ALEX BAENA",
+      "equipo": "ATLÉTICO DE MADRID",
+      "copias": 1
+    },
+    {
       "numero": "49",
       "nombre": "ALMADA",
       "equipo": "ATLÉTICO DE MADRID",
@@ -2776,8 +2782,20 @@
       "copias": 1
     },
     {
+      "numero": "60",
+      "nombre": "ERIC GARCÍA",
+      "equipo": "FC BARCELONA",
+      "copias": 1
+    },
+    {
       "numero": "61",
       "nombre": "ARAÚJO",
+      "equipo": "FC BARCELONA",
+      "copias": 1
+    },
+    {
+      "numero": "62",
+      "nombre": "BALDE",
       "equipo": "FC BARCELONA",
       "copias": 1
     },
@@ -2806,6 +2824,12 @@
       "copias": 2
     },
     {
+      "numero": "72",
+      "nombre": "RASHFORD",
+      "equipo": "FC BARCELONA",
+      "copias": 1
+    },
+    {
       "numero": "73",
       "nombre": "ESCUDO",
       "equipo": "REAL BETIS",
@@ -2816,6 +2840,12 @@
       "nombre": "PAU LÓPEZ",
       "equipo": "REAL BETIS",
       "copias": 2
+    },
+    {
+      "numero": "75",
+      "nombre": "VALLES",
+      "equipo": "REAL BETIS",
+      "copias": 1
     },
     {
       "numero": "76",
@@ -3040,6 +3070,12 @@
       "copias": 2
     },
     {
+      "numero": "148",
+      "nombre": "IGLESIAS",
+      "equipo": "GETAFE CF",
+      "copias": 1
+    },
+    {
       "numero": "152",
       "nombre": "ABQAR",
       "equipo": "GETAFE CF",
@@ -3188,6 +3224,12 @@
       "nombre": "MORALES",
       "equipo": "LEVANTE UD",
       "copias": 2
+    },
+    {
+      "numero": "197",
+      "nombre": "IVÁN ROMERO",
+      "equipo": "LEVANTE UD",
+      "copias": 1
     },
     {
       "numero": "202",
@@ -3382,6 +3424,12 @@
       "copias": 3
     },
     {
+      "numero": "249",
+      "nombre": "VÍCTOR MUÑOZ",
+      "equipo": "CA OSASUNA",
+      "copias": 1
+    },
+    {
       "numero": "250",
       "nombre": "RAÚL GARCÍA",
       "equipo": "CA OSASUNA",
@@ -3466,6 +3514,12 @@
       "copias": 1
     },
     {
+      "numero": "274",
+      "nombre": "RATIU",
+      "equipo": "RAYO VALLECANO",
+      "copias": 1
+    },
+    {
       "numero": "277",
       "nombre": "LUIZ FELIPE",
       "equipo": "RAYO VALLECANO",
@@ -3518,6 +3572,12 @@
       "nombre": "CAMELLO",
       "equipo": "RAYO VALLECANO",
       "copias": 2
+    },
+    {
+      "numero": "289",
+      "nombre": "ESCUDO",
+      "equipo": "REAL SOCIEDAD",
+      "copias": 1
     },
     {
       "numero": "290",
@@ -4030,6 +4090,12 @@
       "copias": 1
     },
     {
+      "numero": "425",
+      "nombre": "CARLOS VICENTE",
+      "equipo": "D. ALAVÉS",
+      "copias": 1
+    },
+    {
       "numero": "434",
       "nombre": "AARON ESCANDELL",
       "equipo": "REAL OVIEDO",
@@ -4060,6 +4126,12 @@
       "copias": 1
     },
     {
+      "numero": "442",
+      "nombre": "UNAI SIMÓN",
+      "equipo": "ATHLETIC CLUB",
+      "copias": 1
+    },
+    {
       "numero": "445",
       "nombre": "MARCOS LLORENTE",
       "equipo": "ATLÉTICO DE MADRID",
@@ -4075,6 +4147,12 @@
       "numero": "448",
       "nombre": "GRIEZMANN",
       "equipo": "ATLÉTICO DE MADRID",
+      "copias": 1
+    },
+    {
+      "numero": "451",
+      "nombre": "RAPHINHA",
+      "equipo": "FC BARCELONA",
       "copias": 1
     },
     {
@@ -4114,6 +4192,18 @@
       "copias": 1
     },
     {
+      "numero": "463",
+      "nombre": "KUBO",
+      "equipo": "REAL SOCIEDAD",
+      "copias": 1
+    },
+    {
+      "numero": "465",
+      "nombre": "JAVI GUERRA",
+      "equipo": "VALENCIA CF",
+      "copias": 1
+    },
+    {
       "numero": "469",
       "nombre": "NICO WILLIAMS",
       "equipo": "BALÓN DE ORO (ATHLETIC)",
@@ -4150,15 +4240,9 @@
       "copias": 1
     },
     {
-      "numero": "225 Bis",
-      "nombre": "LATO",
-      "equipo": "RCD MALLORCA",
-      "copias": 1
-    },
-    {
-      "numero": "261 Bis",
-      "nombre": "EJARIA",
-      "equipo": "REAL OVIEDO",
+      "numero": "14MN",
+      "nombre": "RASHFORD",
+      "equipo": "FC BARCELONA",
       "copias": 1
     },
     {
@@ -5197,253 +5281,613 @@
     ],
     "Ampliación": [
       {
-        "numero": "16 Bis",
-        "nombre": "CALEBE",
+        "numero": "7 BIS",
+        "nombre": "BORJA GARCÉS",
         "equipo": "D. ALAVÉS",
         "tengo": false
       },
       {
-        "numero": "18 Bis",
-        "nombre": "ABDE",
+        "numero": "8 BIS",
+        "nombre": "YUSI ENRÍQUEZ",
         "equipo": "D. ALAVÉS",
         "tengo": true
       },
       {
-        "numero": "30 Bis",
-        "nombre": "REGO",
+        "numero": "15 BIS",
+        "nombre": "ÁNGEL PÉREZ",
+        "equipo": "D. ALAVÉS",
+        "tengo": false
+      },
+      {
+        "numero": "16 BIS",
+        "nombre": "CALEBE GONÇALVES",
+        "equipo": "D. ALAVÉS",
+        "tengo": false
+      },
+      {
+        "numero": "18 BIS",
+        "nombre": "ABDE REBBACH",
+        "equipo": "D. ALAVÉS",
+        "tengo": true
+      },
+      {
+        "numero": "22 BIS",
+        "nombre": "ANDONI GOROSABEL",
+        "equipo": "ATHLETIC CLUB",
+        "tengo": false
+      },
+      {
+        "numero": "29 BIS",
+        "nombre": "SELTON BIAI",
         "equipo": "ATHLETIC CLUB",
         "tengo": true
       },
       {
-        "numero": "32 Bis",
+        "numero": "30 BIS",
+        "nombre": "MIKEL REGO",
+        "equipo": "ATHLETIC CLUB",
+        "tengo": true
+      },
+      {
+        "numero": "32 BIS",
         "nombre": "ROBERT NAVARRO",
         "equipo": "ATHLETIC CLUB",
         "tengo": true
       },
       {
-        "numero": "42 Bis",
-        "nombre": "GIMÉNEZ",
+        "numero": "40 BIS",
+        "nombre": "NAHUEL MOLINA",
         "equipo": "ATLÉTICO DE MADRID",
         "tengo": true
       },
       {
-        "numero": "44 Bis",
-        "nombre": "GALÁN",
+        "numero": "41 BIS",
+        "nombre": "MARC PUBILL",
+        "equipo": "ATLÉTICO DE MADRID",
+        "tengo": false
+      },
+      {
+        "numero": "42 BIS",
+        "nombre": "JOSÉ MARÍA GIMÉNEZ",
         "equipo": "ATLÉTICO DE MADRID",
         "tengo": true
       },
       {
-        "numero": "47 Bis",
+        "numero": "44 BIS",
+        "nombre": "JAVI GALÁN",
+        "equipo": "ATLÉTICO DE MADRID",
+        "tengo": true
+      },
+      {
+        "numero": "46 BIS",
+        "nombre": "OBED VARGAS",
+        "equipo": "ATLÉTICO DE MADRID",
+        "tengo": false
+      },
+      {
+        "numero": "47 BIS",
         "nombre": "JOHNNY CARDOSO",
         "equipo": "ATLÉTICO DE MADRID",
         "tengo": false
       },
       {
-        "numero": "51 Bis",
-        "nombre": "RASPADORI",
+        "numero": "48 BIS",
+        "nombre": "RODRI MENDOZA",
+        "equipo": "ATLÉTICO DE MADRID",
+        "tengo": false
+      },
+      {
+        "numero": "51 BIS",
+        "nombre": "GIACOMO RASPADORI",
         "equipo": "ATLÉTICO DE MADRID",
         "tengo": true
       },
       {
-        "numero": "60 Bis",
+        "numero": "54 BIS",
+        "nombre": "ADEMOLA LOOKMAN",
+        "equipo": "ATLÉTICO DE MADRID",
+        "tengo": false
+      },
+      {
+        "numero": "58 BIS",
+        "nombre": "JOAO CANCELO",
+        "equipo": "FC BARCELONA",
+        "tengo": false
+      },
+      {
+        "numero": "60 BIS",
         "nombre": "GERARD MARTÍN",
         "equipo": "FC BARCELONA",
         "tengo": false
       },
       {
-        "numero": "64 Bis",
-        "nombre": "CASADÓ",
+        "numero": "63 BIS",
+        "nombre": "MARC BERNAL",
         "equipo": "FC BARCELONA",
         "tengo": true
       },
       {
-        "numero": "70 Bis",
-        "nombre": "BARDGHJI",
+        "numero": "64 BIS",
+        "nombre": "MARC CASADÓ",
         "equipo": "FC BARCELONA",
         "tengo": true
       },
       {
-        "numero": "82 Bis",
-        "nombre": "DEOSSA",
+        "numero": "70 BIS",
+        "nombre": "ROONY BARDGHJI",
+        "equipo": "FC BARCELONA",
+        "tengo": true
+      },
+      {
+        "numero": "76 BIS",
+        "nombre": "AITOR RUIBAL",
         "equipo": "REAL BETIS",
         "tengo": false
       },
       {
-        "numero": "85 Bis",
+        "numero": "82 BIS",
+        "nombre": "NELSON DEOSSA",
+        "equipo": "REAL BETIS",
+        "tengo": false
+      },
+      {
+        "numero": "84 BIS",
+        "nombre": "ÁLVARO FIDALGO",
+        "equipo": "REAL BETIS",
+        "tengo": false
+      },
+      {
+        "numero": "85 BIS",
         "nombre": "MARC ROCA",
         "equipo": "REAL BETIS",
         "tengo": true
       },
       {
-        "numero": "89 Bis",
+        "numero": "89 BIS",
         "nombre": "PABLO GARCÍA",
         "equipo": "REAL BETIS",
         "tengo": true
       },
       {
-        "numero": "96 Bis",
+        "numero": "90 BIS",
+        "nombre": "CHIMY ÁVILA",
+        "equipo": "REAL BETIS",
+        "tengo": true
+      },
+      {
+        "numero": "94 BIS",
+        "nombre": "ÁLVARO NÚÑEZ",
+        "equipo": "RC CELTA",
+        "tengo": false
+      },
+      {
+        "numero": "96 BIS",
         "nombre": "YOEL LAGO",
         "equipo": "RC CELTA",
         "tengo": true
       },
       {
-        "numero": "108 Bis",
+        "numero": "101 BIS",
+        "nombre": "MIGUEL ROMÁN",
+        "equipo": "RC CELTA",
+        "tengo": false
+      },
+      {
+        "numero": "102 BIS",
+        "nombre": "THIAGO VECINO",
+        "equipo": "RC CELTA",
+        "tengo": false
+      },
+      {
+        "numero": "104 BIS",
+        "nombre": "FER LÓPEZ",
+        "equipo": "RC CELTA",
+        "tengo": false
+      },
+      {
+        "numero": "105 BIS",
+        "nombre": "ANOUAR EL-ABDELLAOUI",
+        "equipo": "RC CELTA",
+        "tengo": true
+      },
+      {
+        "numero": "108 BIS",
         "nombre": "PABLO DURÁN",
         "equipo": "RC CELTA",
         "tengo": true
       },
       {
-        "numero": "112 Bis",
+        "numero": "112 BIS",
         "nombre": "HÉCTOR FORT",
         "equipo": "ELCHE CF",
         "tengo": true
       },
       {
-        "numero": "138 Bis",
-        "nombre": "PICKEL",
+        "numero": "117 BIS",
+        "nombre": "GONZALO VILLAR",
+        "equipo": "ELCHE CF",
+        "tengo": false
+      },
+      {
+        "numero": "122 BIS",
+        "nombre": "TETE MORENTE",
+        "equipo": "ELCHE CF",
+        "tengo": false
+      },
+      {
+        "numero": "123 BIS",
+        "nombre": "JAVI CEPEDA",
+        "equipo": "ELCHE CF",
+        "tengo": false
+      },
+      {
+        "numero": "138 BIS",
+        "nombre": "CHARLES PICKEL",
         "equipo": "RCD ESPANYOL",
         "tengo": false
       },
       {
-        "numero": "144 Bis",
-        "nombre": "KOLEOSHO",
+        "numero": "139 BIS",
+        "nombre": "JOFRE CARRERAS",
+        "equipo": "RCD ESPANYOL",
+        "tengo": false
+      },
+      {
+        "numero": "143 BIS",
+        "nombre": "CYRIL NGONGE",
+        "equipo": "RCD ESPANYOL",
+        "tengo": false
+      },
+      {
+        "numero": "144 BIS",
+        "nombre": "LUCA KOLEOSHO",
         "equipo": "RCD ESPANYOL",
         "tengo": true
       },
       {
-        "numero": "162 Bis",
+        "numero": "152 BIS",
+        "nombre": "ZAID ROMERO",
+        "equipo": "GETAFE CF",
+        "tengo": false
+      },
+      {
+        "numero": "153 BIS",
+        "nombre": "JUAN MANUEL BOSELLI",
+        "equipo": "GETAFE CF",
+        "tengo": false
+      },
+      {
+        "numero": "160 BIS",
+        "nombre": "LUIS VÁZQUEZ",
+        "equipo": "GETAFE CF",
+        "tengo": false
+      },
+      {
+        "numero": "161 BIS",
+        "nombre": "MARTÍN SATRIANO",
+        "equipo": "GETAFE CF",
+        "tengo": false
+      },
+      {
+        "numero": "162 BIS",
         "nombre": "ÁLEX SANCRIS",
         "equipo": "GETAFE CF",
         "tengo": true
       },
       {
-        "numero": "175 Bis",
-        "nombre": "LEMAR",
+        "numero": "165 BIS",
+        "nombre": "MARC-ANDRÉ TER STEGEN",
         "equipo": "GIRONA FC",
         "tengo": false
       },
       {
-        "numero": "176 Bis",
-        "nombre": "PORTU",
+        "numero": "172 BIS",
+        "nombre": "FRAN BELTRÁN",
+        "equipo": "GIRONA FC",
+        "tengo": false
+      },
+      {
+        "numero": "174 BIS",
+        "nombre": "CLAUDIO ECHEVERRI",
+        "equipo": "GIRONA FC",
+        "tengo": false
+      },
+      {
+        "numero": "175 BIS",
+        "nombre": "THOMAS LEMAR",
+        "equipo": "GIRONA FC",
+        "tengo": false
+      },
+      {
+        "numero": "176 BIS",
+        "nombre": "CRISTIAN PORTU",
         "equipo": "GIRONA FC",
         "tengo": true
       },
       {
-        "numero": "193 Bis",
-        "nombre": "ARRIAGA",
-        "equipo": "LEVANTE UD",
-        "tengo": true
-      },
-      {
-        "numero": "196 Bis",
-        "nombre": "KOYALIPOU",
+        "numero": "190 BIS",
+        "nombre": "AMINE RAGHOUBER",
         "equipo": "LEVANTE UD",
         "tengo": false
       },
       {
-        "numero": "206 Bis",
-        "nombre": "ASENCIO",
+        "numero": "192 BIS",
+        "nombre": "IKER LOSADA",
+        "equipo": "LEVANTE UD",
+        "tengo": true
+      },
+      {
+        "numero": "193 BIS",
+        "nombre": "XAVI ARRIAGA",
+        "equipo": "LEVANTE UD",
+        "tengo": true
+      },
+      {
+        "numero": "194 BIS",
+        "nombre": "TUNDE AKINSOLA",
+        "equipo": "LEVANTE UD",
+        "tengo": true
+      },
+      {
+        "numero": "195 BIS",
+        "nombre": "PACO CORTÉS",
+        "equipo": "LEVANTE UD",
+        "tengo": false
+      },
+      {
+        "numero": "196 BIS",
+        "nombre": "GODUINE KOYALIPOU",
+        "equipo": "LEVANTE UD",
+        "tengo": false
+      },
+      {
+        "numero": "206 BIS",
+        "nombre": "RAÚL ASENCIO",
         "equipo": "REAL MADRID",
         "tengo": false
       },
       {
-        "numero": "208 Bis",
-        "nombre": "CAMAVINGA",
+        "numero": "207 BIS",
+        "nombre": "FRAN GARCÍA",
+        "equipo": "REAL MADRID",
+        "tengo": false
+      },
+      {
+        "numero": "208 BIS",
+        "nombre": "EDUARDO CAMAVINGA",
         "equipo": "REAL MADRID",
         "tengo": true
       },
       {
-        "numero": "215 Bis",
+        "numero": "211 BIS",
+        "nombre": "DANI CEBALLOS",
+        "equipo": "REAL MADRID",
+        "tengo": true
+      },
+      {
+        "numero": "215 BIS",
         "nombre": "BRAHIM DÍAZ",
         "equipo": "REAL MADRID",
         "tengo": true
       },
       {
-        "numero": "225 Bis",
-        "nombre": "LATO",
+        "numero": "225 BIS",
+        "nombre": "TONI LATO",
         "equipo": "RCD MALLORCA",
         "tengo": true
       },
       {
-        "numero": "227 Bis",
-        "nombre": "MASCARELL",
+        "numero": "227 BIS",
+        "nombre": "OMAR MASCARELL",
         "equipo": "RCD MALLORCA",
         "tengo": true
       },
       {
-        "numero": "234 Bis",
-        "nombre": "ABDÓN",
+        "numero": "233 BIS",
+        "nombre": "ZITO LUVUMBO",
+        "equipo": "RCD MALLORCA",
+        "tengo": false
+      },
+      {
+        "numero": "234 BIS",
+        "nombre": "ABDÓN PRATS",
         "equipo": "RCD MALLORCA",
         "tengo": true
       },
       {
-        "numero": "247 Bis",
+        "numero": "241 BIS",
+        "nombre": "IÑIGO ARGUIBIDE",
+        "equipo": "CA OSASUNA",
+        "tengo": true
+      },
+      {
+        "numero": "243 BIS",
+        "nombre": "MANU GALÁN",
+        "equipo": "CA OSASUNA",
+        "tengo": false
+      },
+      {
+        "numero": "247 BIS",
         "nombre": "IKER BENITO",
         "equipo": "CA OSASUNA",
         "tengo": true
       },
       {
-        "numero": "259 Bis",
+        "numero": "252 BIS",
+        "nombre": "RAÚL MORO",
+        "equipo": "CA OSASUNA",
+        "tengo": false
+      },
+      {
+        "numero": "259 BIS",
         "nombre": "DAVID COSTAS",
         "equipo": "REAL OVIEDO",
         "tengo": true
       },
       {
-        "numero": "261 Bis",
-        "nombre": "EJARIA",
+        "numero": "261 BIS",
+        "nombre": "OVIE EJARIA",
         "equipo": "REAL OVIEDO",
         "tengo": true
       },
       {
-        "numero": "283 Bis",
-        "nombre": "GUMBAU",
+        "numero": "263 BIS",
+        "nombre": "KWANE SIBO",
+        "equipo": "REAL OVIEDO",
+        "tengo": false
+      },
+      {
+        "numero": "265 BIS",
+        "nombre": "NICO FONSECA",
+        "equipo": "REAL OVIEDO",
+        "tengo": false
+      },
+      {
+        "numero": "267 BIS",
+        "nombre": "THIAGO FERNÁNDEZ",
+        "equipo": "REAL OVIEDO",
+        "tengo": false
+      },
+      {
+        "numero": "277 BIS",
+        "nombre": "NOBEL MENDY",
+        "equipo": "RAYO VALLECANO",
+        "tengo": false
+      },
+      {
+        "numero": "278 BIS",
+        "nombre": "ALFONSO ESPINO",
         "equipo": "RAYO VALLECANO",
         "tengo": true
       },
       {
-        "numero": "299 Bis",
+        "numero": "283 BIS",
+        "nombre": "GERARD GUMBAU",
+        "equipo": "RAYO VALLECANO",
+        "tengo": true
+      },
+      {
+        "numero": "285 BIS",
+        "nombre": "CARLOS MARTÍN",
+        "equipo": "RAYO VALLECANO",
+        "tengo": false
+      },
+      {
+        "numero": "288 BIS",
+        "nombre": "ILIAS AKHOMACH",
+        "equipo": "RAYO VALLECANO",
+        "tengo": false
+      },
+      {
+        "numero": "293 BIS",
+        "nombre": "JON MARTIN",
+        "equipo": "REAL SOCIEDAD",
+        "tengo": false
+      },
+      {
+        "numero": "299 BIS",
         "nombre": "YANGEL HERRERA",
         "equipo": "REAL SOCIEDAD",
         "tengo": true
       },
       {
-        "numero": "321 Bis",
-        "nombre": "ALFON",
+        "numero": "305 BIS",
+        "nombre": "WESLEY GASSOVA",
+        "equipo": "REAL SOCIEDAD",
+        "tengo": false
+      },
+      {
+        "numero": "314 BIS",
+        "nombre": "JOAQUÍN OSO",
+        "equipo": "SEVILLA FC",
+        "tengo": false
+      },
+      {
+        "numero": "321 BIS",
+        "nombre": "ALFON GONZÁLEZ",
         "equipo": "SEVILLA FC",
         "tengo": true
       },
       {
-        "numero": "336 Bis",
-        "nombre": "UGRINIC",
-        "equipo": "VALENCIA CF",
-        "tengo": true
+        "numero": "324 BIS",
+        "nombre": "NEAL MAUPAY",
+        "equipo": "SEVILLA FC",
+        "tengo": false
       },
       {
-        "numero": "340 Bis",
-        "nombre": "RABA",
+        "numero": "332 BIS",
+        "nombre": "CHRISTIAN NÚÑEZ",
         "equipo": "VALENCIA CF",
         "tengo": false
       },
       {
-        "numero": "342 Bis",
+        "numero": "334 BIS",
+        "nombre": "GUIDO RODRÍGUEZ",
+        "equipo": "VALENCIA CF",
+        "tengo": false
+      },
+      {
+        "numero": "336 BIS",
+        "nombre": "FILIP UGRINIC",
+        "equipo": "VALENCIA CF",
+        "tengo": true
+      },
+      {
+        "numero": "340 BIS",
+        "nombre": "DANI RABA",
+        "equipo": "VALENCIA CF",
+        "tengo": false
+      },
+      {
+        "numero": "341 BIS",
+        "nombre": "UMAR SADIQ",
+        "equipo": "VALENCIA CF",
+        "tengo": false
+      },
+      {
+        "numero": "342 BIS",
         "nombre": "LUCAS BELTRÁN",
         "equipo": "VALENCIA CF",
         "tengo": true
       },
       {
-        "numero": "356 Bis",
-        "nombre": "SOLOMON",
+        "numero": "346 BIS",
+        "nombre": "HASSAN FREEMAN",
         "equipo": "VILLARREAL CF",
         "tengo": false
       },
       {
-        "numero": "358 Bis",
-        "nombre": "ILIAS",
+        "numero": "347 BIS",
+        "nombre": "PAU NAVARRO",
         "equipo": "VILLARREAL CF",
         "tengo": true
       },
       {
-        "numero": "360 Bis",
+        "numero": "350 BIS",
+        "nombre": "ALFONSO PEDRAZA",
+        "equipo": "VILLARREAL CF",
+        "tengo": false
+      },
+      {
+        "numero": "355 BIS",
+        "nombre": "ALFON GONZÁLEZ",
+        "equipo": "VILLARREAL CF",
+        "tengo": false
+      },
+      {
+        "numero": "356 BIS",
+        "nombre": "MANOR SOLOMON",
+        "equipo": "VILLARREAL CF",
+        "tengo": false
+      },
+      {
+        "numero": "358 BIS",
+        "nombre": "ILIAS AKHOMACH",
+        "equipo": "VILLARREAL CF",
+        "tengo": true
+      },
+      {
+        "numero": "360 BIS",
         "nombre": "GERARD MORENO",
         "equipo": "VILLARREAL CF",
         "tengo": true
@@ -5628,7 +6072,7 @@
         "numero": "5 Sobre Premium",
         "nombre": "Oyarzabal",
         "equipo": "REAL SOCIEDAD",
-        "tengo": false
+        "tengo": true
       },
       {
         "numero": "6 Sobre Premium",
@@ -5689,6 +6133,150 @@
         "nombre": "De Frutos",
         "equipo": "RAYO VALLECANO",
         "tengo": true
+      },
+      {
+        "numero": "Momentum ORO BILLION",
+        "nombre": "Nico Williams / Williams",
+        "equipo": "ATHLETIC CLUB",
+        "tengo": true
+      },
+      {
+        "numero": "Momentum ORO BILLION",
+        "nombre": "Ferran Torres / Lamine Yamal",
+        "equipo": "FC BARCELONA",
+        "tengo": true
+      },
+      {
+        "numero": "Momentum ORO BILLION",
+        "nombre": "Vinícius / Mbappé",
+        "equipo": "REAL MADRID",
+        "tengo": true
+      },
+      {
+        "numero": "Momentum ORO BILLION",
+        "nombre": "Cucho Hernández / Antony",
+        "equipo": "REAL BETIS",
+        "tengo": true
+      },
+      {
+        "numero": "Momentum ORO BILLION",
+        "nombre": "Iago Aspas / Borja Iglesias",
+        "equipo": "RC CELTA",
+        "tengo": true
+      },
+      {
+        "numero": "Momentum ORO BILLION",
+        "nombre": "Sorloth / Julián Alvarez",
+        "equipo": "ATLÉTICO DE MADRID",
+        "tengo": true
+      },
+      {
+        "numero": "MOMENTUM ORO",
+        "nombre": "Lamine Yamal",
+        "equipo": "FC BARCELONA",
+        "tengo": false
+      },
+      {
+        "numero": "MOMENTUM ORO",
+        "nombre": "Kylian Mbappé",
+        "equipo": "REAL MADRID",
+        "tengo": false
+      },
+      {
+        "numero": "MOMENTUM ORO",
+        "nombre": "Jude Bellingham",
+        "equipo": "REAL MADRID",
+        "tengo": false
+      },
+      {
+        "numero": "ED. LIMITADA (MOMENTUM ORO)",
+        "nombre": "Robert Lewandowski",
+        "equipo": "FC BARCELONA",
+        "tengo": false
+      },
+      {
+        "numero": "ED. LIMITADA (MOMENTUM ORO)",
+        "nombre": "Fede Valverde",
+        "equipo": "REAL MADRID",
+        "tengo": false
+      },
+      {
+        "numero": "ED. LIMITADA (MOMENTUM ORO)",
+        "nombre": "Julián Alvarez",
+        "equipo": "ATLÉTICO DE MADRID",
+        "tengo": false
+      },
+      {
+        "numero": "NUEVO DIAMANTE",
+        "nombre": "Pau Cubarsí",
+        "equipo": "FC BARCELONA",
+        "tengo": false
+      },
+      {
+        "numero": "NUEVO DIAMANTE",
+        "nombre": "Arda Güler",
+        "equipo": "REAL MADRID",
+        "tengo": false
+      },
+      {
+        "numero": "NUEVO DIAMANTE",
+        "nombre": "Fermín López",
+        "equipo": "FC BARCELONA",
+        "tengo": false
+      },
+      {
+        "numero": "NUEVO DIAMANTE",
+        "nombre": "Endrick Felipe",
+        "equipo": "REAL MADRID",
+        "tengo": false
+      },
+      {
+        "numero": "NUEVO DIAMANTE",
+        "nombre": "Marc Casadó",
+        "equipo": "FC BARCELONA",
+        "tengo": false
+      },
+      {
+        "numero": "NUEVO DIAMANTE",
+        "nombre": "Cristhian Mosquera",
+        "equipo": "VALENCIA CF",
+        "tengo": false
+      },
+      {
+        "numero": "NUEVO DIAMANTE",
+        "nombre": "Assane Diao",
+        "equipo": "REAL BETIS",
+        "tengo": false
+      },
+      {
+        "numero": "NUEVO DIAMANTE",
+        "nombre": "Samu Omorodion",
+        "equipo": "ATLÉTICO DE MADRID",
+        "tengo": false
+      },
+      {
+        "numero": "NUEVO DIAMANTE",
+        "nombre": "Isaac Romero",
+        "equipo": "SEVILLA FC",
+        "tengo": false
+      },
+      {
+        "numero": "NUEVO DIAMANTE",
+        "nombre": "Alberto Moleiro",
+        "equipo": "UD LAS PALMAS",
+        "tengo": false
+      },
+      {
+        "numero": "NUEVO DIAMANTE",
+        "nombre": "Bryan Zaragoza",
+        "equipo": "CA OSASUNA",
+        "tengo": false
+      },
+      {
+        "numero": "NUEVO DIAMANTE",
+        "nombre": "Vitor Roque",
+        "equipo": "REAL BETIS",
+        "tengo": false
       }
     ]
   },
@@ -5717,6 +6305,7 @@
     "REAL OVIEDO",
     "REAL SOCIEDAD",
     "SEVILLA FC",
+    "UD LAS PALMAS",
     "UD LEVANTE",
     "VALENCIA CF",
     "VARIOS",
