@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "ultima_actualizacion": "2026-04-19T10:14:03.556635",
+    "ultima_actualizacion": "2026-04-20T04:59:33.491963",
     "version": "2.0"
   },
   "resumen": [
@@ -48,10 +48,10 @@
     },
     {
       "categoria": "Influencers",
-      "total": 9,
+      "total": 13,
       "tengo": 12,
-      "faltan": -3,
-      "progreso": 1.333333333
+      "faltan": 1,
+      "progreso": 0.9230769231
     },
     {
       "categoria": "Protas",
@@ -76,24 +76,24 @@
     },
     {
       "categoria": "Ampliación",
-      "total": 46,
+      "total": 102,
       "tengo": 44,
-      "faltan": 2,
-      "progreso": 0.9565217391
+      "faltan": 58,
+      "progreso": 0.431372549
     },
     {
       "categoria": "Especiales",
-      "total": 36,
+      "total": 61,
       "tengo": 25,
-      "faltan": 11,
-      "progreso": 0.6944444444
+      "faltan": 36,
+      "progreso": 0.4098360656
     },
     {
       "categoria": "TOTAL COLECCIÓN",
-      "total": 595,
+      "total": 680,
       "tengo": 551,
-      "faltan": 44,
-      "progreso": 0.9260504201680673
+      "faltan": 129,
+      "progreso": 0.8102941176470588
     }
   ],
   "regulares": [
